@@ -30,3 +30,5 @@
 3. `db/migrations/[timestamp]_create_family.sql` にSQLを記述
    1. `-- migrate:up` にはマイグレーション作成のSQLを記述
    2. `-- migrate:down` にはRollback用のSQLを記述
+4. `dbmate status` でマイグレーションの状態を確認
+   1. `db/migrations/[timestamp]_create_family.sql` が`pending` と表示される（まだこのversionは実行されていないため）
