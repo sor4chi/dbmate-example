@@ -22,3 +22,6 @@
 7. `dbmate up` でマイグレーションを実行(テストで一度rollbackしてしまったので再度migrationをする)
 8. `dbmate new create_family_table` でマイグレーションファイルを作成
    1. `db/migrations/[timestamp]_create_family.sql` が作成される
+9. `db/migrations/[timestamp]_create_family.sql` にSQLを記述
+   1. `-- migrate:up` にはマイグレーション作成のSQLを記述
+   2. `-- migrate:down` にはRollback用のSQLを記述
