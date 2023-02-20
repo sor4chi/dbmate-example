@@ -1,3 +1,32 @@
+# Install
+
+## macOS
+
+```sh
+brew install dbmate
+```
+
+## Linux
+
+```sh
+sudo curl -fsSL -o /usr/local/bin/dbmate https://github.com/amacneil/dbmate/releases/latest/download/dbmate-linux-amd64
+sudo chmod +x /usr/local/bin/dbmate
+```
+
+## Windows
+
+```sh
+scoop install dbmate
+```
+
+## Docker
+
+Dockerは.env上での他ENVの埋め込みができないため、DATABASE_URLを直接文字列で指定する必要があります。
+
+```sh
+ docker run --rm -it --network=host ghcr.io/amacneil/dbmate:1 [この後にdbmateのサブコマンドでそのまま実行できます]
+```
+
 # 開発の流れ
 
 ## 手順1、まずマイグレーション書いてみよう
