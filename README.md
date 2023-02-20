@@ -20,3 +20,5 @@
       1. 実行時にpasswordを聞かれるので、`test` と入力（MYSQL_PASSWORD）
       2. この時点ではテーブルが存在しないので、`ERROR 1146 (42S02) at line 1: Table 'test.users' doesn't exist` と表示される
 7. `dbmate up` でマイグレーションを実行(テストで一度rollbackしてしまったので再度migrationをする)
+8. `dbmate new create_family_table` でマイグレーションファイルを作成
+   1. `db/migrations/[timestamp]_create_family.sql` が作成される
