@@ -32,3 +32,10 @@
    2. `-- migrate:down` にはRollback用のSQLを記述
 4. `dbmate status` でマイグレーションの状態を確認
    1. `db/migrations/[timestamp]_create_family.sql` が`pending` と表示される（まだこのversionは実行されていないため）
+5. `dbmate up` でマイグレーションを実行
+   1. `db/migrations/[timestamp]_create_family.sql` の`-- migrate:up` に記述したSQLが実行される
+   2. `dbmate status` でマイグレーションの状態を確認
+      1. `db/migrations/[timestamp]_create_family.sql` が`migrated` と表示される（このversionは実行されたため）
+   3. `sh check_2.sh` でテーブルが空であることを確認
+      1. 実行時にpasswordを聞かれるので、`test` と入力（MYSQL_PASSWORD）
+      2. familyテーブルが作成されていることが確認できる
